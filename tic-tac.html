@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="tic-tac.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+        <div class="container mt-5 text-center">
+
+            <!-- heading -->
+            <div class="heading mb-5">
+                <h1>Tic Tac Toe</h1>
+            </div>
+
+            <!-- boxes -->
+            <div class="box">
+                <div class="row rows-col-3">
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('1','b1')" id="b1" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('2','b2')" id="b2" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('3','b3')" id="b3" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('4','b4')" id="b4" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('5','b5')" id="b5" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('6','b6')" id="b6" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('7','b7')" id="b7" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('8','b8')" id="b8" class="xo"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 ibox" onclick="name('9','b9')" id="b9" class="xo"></div>
+                </div>
+            </div>
+
+            <!--undo & reset button -->
+            <div class="resetBtn mt-5 mb-5">
+                <button class="btn btn-primary btn-lg"  onclick="undo()">Undo</button>
+                <button class="btn btn-primary btn-lg"  onclick="reset()">Reset</button>
+            </div>
+        </div>
+
+        <!-- result displayed in modal box -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="modalButton">
+            Launch static backdrop modal
+        </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Result</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="result">
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="reset()">Next Game</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+        <script src="tic-tac.js"></script>
+    </body>
+</html>

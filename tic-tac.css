@@ -1,0 +1,19 @@
+.ibox{
+    height: 150px;
+    line-height: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 40px;
+    transition: all 0.2s;
+}
+.ibox:hover{
+    background-color: rgb(201, 198, 198);
+}
+#modalButton{
+    display: none;
+}
+.xo{
+    pointer-events: auto;
+}
+
+
