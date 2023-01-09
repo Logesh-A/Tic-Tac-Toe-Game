@@ -14,8 +14,7 @@ var combinations = [ ['1','2','3'],
 var alreadyMarked = [];
 var flag = 0;
 
-function name(value,boxNo)
-{
+let name = (value, boxNo) => {
     // to avoid marking of already marked boxes
     for(var i=0; i<alreadyMarked.length; i++)
     {
@@ -28,7 +27,7 @@ function name(value,boxNo)
 
     // to change innnerhtml of the div
     var x = getId(boxNo);
-    x.innerHTML=playerName;
+    x.innerHTML = playerName;
 
     // to change playerName for next call
     if(playerName == 'X')
@@ -106,17 +105,15 @@ function name(value,boxNo)
     }
 }
 
-function getId(id)
-{
+let getId = (id) => {
     return document.getElementById(id);
 }
 
-function reset()
-{
+let reset = () => {
     location.reload();
 }
 
-function disableClick(){
+let disableClick = () => {
     for (var i=1;i<=9;i++)
     {
         var s = 'b';
@@ -125,8 +122,7 @@ function disableClick(){
     }
 }
 
-function undo() 
-{
+let undo = () => {
     var z = alreadyMarked.pop()
     var s = 'b'+z.toString()
     getId(s).innerHTML='';
